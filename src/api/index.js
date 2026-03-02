@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+const API = axios.create({ baseURL: 'https://sdp2026backend.onrender.com/api' });
 
 // Add token to headers for protected routes
 API.interceptors.request.use((req) => {
