@@ -11,7 +11,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/users/login', { email, password });
+      const res = await axios.post('https://sdp2026backend.onrender.com/api/users/login', { email, password });
       localStorage.setItem('user', JSON.stringify(res.data));
       navigate(res.data.role === 'admin' ? '/admin' : '/educator');
     } catch (err) { alert("Access Denied: Invalid Credentials"); }

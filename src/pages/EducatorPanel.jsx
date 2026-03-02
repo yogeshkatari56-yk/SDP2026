@@ -14,7 +14,7 @@ export default function EducatorPanel() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/content/publish', { ...formData, authorEmail: user.email });
+      await axios.post('https://sdp2026backend.onrender.com/api/content/publish', { ...formData, authorEmail: user.email });
       alert("🚀 Insight Sent for Admin Review");
       setFormData({ title: '', category: 'Fundamental Rights', body: '', insight: '' });
     } catch (err) { 

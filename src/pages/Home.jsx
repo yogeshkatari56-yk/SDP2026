@@ -8,7 +8,7 @@ export default function Home() {
   const [feed, setFeed] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/content/public')
+    axios.get('https://sdp2026backend.onrender.com/api/content/public')
       .then(res => setFeed(res.data))
       .catch(err => console.error("Expert feed offline"));
   }, []);

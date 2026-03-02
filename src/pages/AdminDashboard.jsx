@@ -9,8 +9,8 @@ export default function AdminDashboard() {
 
   const fetchData = useCallback(async () => {
     try {
-      const eduRes = await axios.get('http://localhost:5000/api/admin/educators');
-      const penRes = await axios.get('http://localhost:5000/api/admin/pending');
+      const eduRes = await axios.get('https://sdp2026backend.onrender.com/api/admin/educators');
+      const penRes = await axios.get('https://sdp2026backend.onrender.com/api/admin/pending');
       setEducators(eduRes.data);
       setPending(penRes.data);
     } catch (err) { console.error(err); }
